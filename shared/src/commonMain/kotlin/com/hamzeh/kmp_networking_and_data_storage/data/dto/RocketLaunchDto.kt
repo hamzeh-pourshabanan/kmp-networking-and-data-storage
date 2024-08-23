@@ -1,4 +1,4 @@
-package com.hamzeh.kmp_networking_and_data_storage.entity
+package com.hamzeh.kmp_networking_and_data_storage.data.dto
 
 import androidx.room.Entity
 import kotlinx.datetime.Instant

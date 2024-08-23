@@ -2,7 +2,7 @@ package com.hamzeh.kmp_networking_and_data_storage.db
 
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.hamzeh.kmp_networking_and_data_storage.data.sources.room.Database
+import com.hamzeh.kmp_networking_and_data_storage.data.db.Database
 import kotlinx.cinterop.ExperimentalForeignApi
 import platform.Foundation.NSDocumentDirectory
 import platform.Foundation.NSFileManager

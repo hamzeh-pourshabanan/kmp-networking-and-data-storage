@@ -1,9 +1,9 @@
-package com.hamzeh.kmp_networking_and_data_storage.data.sources.room.dao
+package com.hamzeh.kmp_networking_and_data_storage.data.db.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
-import com.hamzeh.kmp_networking_and_data_storage.entity.RocketLaunch
+import com.hamzeh.kmp_networking_and_data_storage.data.dto.RocketLaunch
 
 @Dao
 interface SpaceXDao {
