@@ -6,11 +6,12 @@ import androidx.room.RoomDatabaseConstructor
 import com.hamzeh.kmp_networking_and_data_storage.data.db.dao.SpaceXDao
 import com.hamzeh.kmp_networking_and_data_storage.data.dto.RocketLaunch
 import androidx.sqlite.driver.bundled.BundledSQLiteDriver
+import com.hamzeh.kmp_networking_and_data_storage.data.db.entity.RocketLaunchEntity
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.IO
 
 
-@androidx.room.Database(entities = [RocketLaunch::class], version = 1)
+@androidx.room.Database(entities = [RocketLaunchEntity::class], version = 1)
 @ConstructedBy(AppDatabaseConstructor::class)
 abstract class Database : RoomDatabase() {
     abstract fun getDao(): SpaceXDao
