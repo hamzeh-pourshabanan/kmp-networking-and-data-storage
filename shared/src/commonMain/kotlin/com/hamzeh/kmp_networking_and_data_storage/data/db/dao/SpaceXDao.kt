@@ -4,12 +4,13 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.Query
 import com.hamzeh.kmp_networking_and_data_storage.data.db.entity.RocketLaunchEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface SpaceXDao {
 
     @Query("SELECT * FROM rocket_launches")
-    suspend fun getAllLaunches(): List<RocketLaunchEntity>
+    fun getAllLaunches(): Flow<List<RocketLaunchEntity>>
 
     @Insert
     suspend fun insertAllLaunches(launches: List<RocketLaunchEntity>)

@@ -7,7 +7,7 @@ import androidx.room.PrimaryKey
 data class RocketLaunchEntity(
     @PrimaryKey val flightNumber: Int,
     val missionName: String,
-    val launchDateUTC: String,
+    val launchDate: String,
     val details: String?,
     val launchSuccess: Boolean?,
     val patchSmall: String?,

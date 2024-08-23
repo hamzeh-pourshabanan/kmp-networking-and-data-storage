@@ -23,7 +23,11 @@ data class RocketLaunch(
     @SerialName("links")
     val links: Links
 ) {
-    var launchYear = Instant.parse(launchDateUTC).toLocalDateTime(TimeZone.UTC).year
+    val launchYear = Instant.parse(launchDateUTC).toLocalDateTime(TimeZone.UTC).year
+    val launchMonth = Instant.parse(launchDateUTC).toLocalDateTime(TimeZone.UTC).month
+    val launchDay = Instant.parse(launchDateUTC).toLocalDateTime(TimeZone.UTC).dayOfMonth
+
+    val launchDate = "$launchYear-$launchMonth-$launchDay"
 }
 
 @Serializable
