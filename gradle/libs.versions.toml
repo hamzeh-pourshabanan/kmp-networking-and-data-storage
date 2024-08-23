@@ -51,6 +51,7 @@ room-gradle-plugin = { module = "androidx.room:room-gradle-plugin", version.ref 
 androidx-lifecycle-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "androidxLifecycle" }
 androidx-lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "androidxLifecycle" }
 resource-test = { module = "com.goncalossilva:resources", version.ref = "testResourceVersion" }
+turbin = { module = "app.cash.turbine:turbine", version.ref = "turbine"}
 
 ## Coroutine
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutines" }
