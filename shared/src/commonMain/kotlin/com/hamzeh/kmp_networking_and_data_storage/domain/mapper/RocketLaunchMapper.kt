@@ -22,3 +22,5 @@ fun RocketLaunchEntity.toDomainModel(): RocketLaunchDomainModel = RocketLaunchDo
     launchSuccess = launchSuccess,
     patchSmall = patchSmall
 )
+
+fun List<RocketLaunchEntity>.toDomainModel(): List<RocketLaunchDomainModel> = map { it.toDomainModel() }
