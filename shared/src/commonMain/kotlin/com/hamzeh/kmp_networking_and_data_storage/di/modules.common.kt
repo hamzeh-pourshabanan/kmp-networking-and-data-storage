@@ -3,6 +3,8 @@ package com.hamzeh.kmp_networking_and_data_storage.di
 import com.hamzeh.kmp_networking_and_data_storage.data.db.AppDatabaseConstructor
 import com.hamzeh.kmp_networking_and_data_storage.data.db.Database
 import com.hamzeh.kmp_networking_and_data_storage.data.network.apiClient
+import com.hamzeh.kmp_networking_and_data_storage.data.repository.DefaultRocketLaunchRepository
+import com.hamzeh.kmp_networking_and_data_storage.data.repository.RocketLaunchRepository
 import com.hamzeh.kmp_networking_and_data_storage.data.sources.SpaceXLocalDataSource
 import com.hamzeh.kmp_networking_and_data_storage.data.sources.SpaceXRemoteDataSource
 import com.hamzeh.kmp_networking_and_data_storage.data.sources.ktor.KtorSpaceXRemoteDataSource
@@ -18,4 +20,5 @@ val coreModule = module {
 
     single<Database> { AppDatabaseConstructor.initialize() }
     single<SpaceXLocalDataSource> { RoomSpaceXLocalDataSource(get()) }
+    single<RocketLaunchRepository> { DefaultRocketLaunchRepository(localDataSource = get(), remoteDataSource = get())}
 }
