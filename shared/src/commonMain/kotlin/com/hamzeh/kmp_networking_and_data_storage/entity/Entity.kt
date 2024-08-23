@@ -1,11 +1,13 @@
 package com.hamzeh.kmp_networking_and_data_storage.entity
 
+import androidx.room.Entity
 import kotlinx.datetime.Instant
 import kotlinx.datetime.TimeZone
 import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+@Entity
 @Serializable
 data class RocketLaunch(
     @SerialName("flight_number")
