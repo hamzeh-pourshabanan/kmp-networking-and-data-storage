@@ -2,7 +2,7 @@ package com.hamzeh.kmp_networking_and_data_storage.unit.domain
 
 import app.cash.turbine.test
 import com.hamzeh.kmp_networking_and_data_storage.data.repository.DefaultRocketLaunchRepository
-import com.hamzeh.kmp_networking_and_data_storage.domain.usecase.refreshLaunches.RefreshRocketLaunches
+import com.hamzeh.kmp_networking_and_data_storage.domain.usecase.refreshLaunches.DefaultRefreshRocketLaunchesUseCase
 import com.hamzeh.kmp_networking_and_data_storage.unit.data.resources.FakeSpaceXRemoteDataSource
 import com.hamzeh.kmp_networking_and_data_storage.unit.data.resources.InMemorySpaceXLocalDataSource
 import kotlinx.coroutines.test.runTest
@@ -19,7 +19,7 @@ class RefreshRocketLaunchesTest {
 
     @Test
     fun `When refresh launches then data source is populated by remote data`() = runTest{
-        RefreshRocketLaunches(repository).invoke()
+        DefaultRefreshRocketLaunchesUseCase(repository).invoke()
 
         localXLocalDataSource.getAllLaunches().test {
             assertEquals(true, awaitItem().isNotEmpty())
