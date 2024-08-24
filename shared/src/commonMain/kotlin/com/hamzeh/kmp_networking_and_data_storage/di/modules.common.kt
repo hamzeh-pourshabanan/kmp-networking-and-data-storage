@@ -10,12 +10,16 @@ import com.hamzeh.kmp_networking_and_data_storage.data.sources.SpaceXRemoteDataS
 import com.hamzeh.kmp_networking_and_data_storage.data.sources.ktor.KtorSpaceXRemoteDataSource
 import com.hamzeh.kmp_networking_and_data_storage.data.sources.room.RoomSpaceXLocalDataSource
 import io.ktor.client.HttpClient
+import org.koin.core.module.Module
 import org.koin.dsl.module
 
 private const val BASE_URL = "https://api.spacexdata.com"
 
 val coreModule = module {
     single<HttpClient> { apiClient(BASE_URL) }
+    }
+
+val sharedModule = module {
     single<SpaceXRemoteDataSource> { KtorSpaceXRemoteDataSource(get<HttpClient>()) }
 
     single<Database> { AppDatabaseConstructor.initialize() }

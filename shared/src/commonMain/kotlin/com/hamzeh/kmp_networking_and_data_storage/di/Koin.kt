@@ -7,7 +7,7 @@ import org.koin.dsl.module
 
 fun startKoinApplication(appModule: Module = module { }): KoinApplication {
     return startKoinApplication(
-        listOf(appModule, coreModule)
+        listOf(appModule, sharedModule, coreModule)
     )
 }
 
