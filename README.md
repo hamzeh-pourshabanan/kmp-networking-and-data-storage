@@ -1,9 +1,9 @@
-**Kotlin Multiplatform SpaceX Rocket Launches App**
+# Kotlin Multiplatform SpaceX Rocket Launches App
 
 This project is a Kotlin Multiplatform application that targets both Android and iOS platforms. It fetches SpaceX rocket launch data using the SpaceX API and demonstrates how to use Room for local storage and ViewModel in the shared module. The UI for the Android version is implemented using Jetpack Compose.
 
 
-**Features**
+## Features
 
 • **Fetch Rocket Launches**: Retrieves SpaceX rocket launch data.
 
@@ -17,9 +17,7 @@ This project is a Kotlin Multiplatform application that targets both Android and
 
 
 
-**Tech Stack**
-
-
+## Tech Stack
 
 • **Kotlin Multiplatform**: Shared codebase for Android and iOS.
 
@@ -34,8 +32,7 @@ This project is a Kotlin Multiplatform application that targets both Android and
 • **SQLite**: Database engine bundled with Room.
 
 
-
-**Dependencies**
+## Dependencies
 
 `// Core libraries`
 `kotlin = "2.0.20"`
@@ -53,7 +50,7 @@ This project is a Kotlin Multiplatform application that targets both Android and
 `// iOS`
 `// Add iOS-specific dependencies here`
 
-**Setup**
+## Setup
 
 1. Clone the repository.
 
@@ -64,15 +61,14 @@ This project is a Kotlin Multiplatform application that targets both Android and
 4. Run the app on Android or iOS.
 
 
-
-**Usage**
+## Usage
 
 • **Fetch Data**: On app launch, the SpaceX rocket launches are fetched from the API and stored locally.
 
 • **Offline Access**: Rocket launches can be accessed offline using Room.
 
 
-**Contribution**
+## Contribution
 
 Contributions are welcome! To contribute:
 
@@ -84,6 +80,6 @@ Contributions are welcome! To contribute:
 
 4. Submit a pull request with a detailed description of your changes.
 
-**License**
+## License
 
 This project is licensed under the MIT License.
