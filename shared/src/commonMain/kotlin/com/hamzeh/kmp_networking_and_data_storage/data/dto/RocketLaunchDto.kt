@@ -7,9 +7,17 @@ import kotlinx.datetime.toLocalDateTime
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
+@Serializable
+data class RocketLaunchResponse(
+    @SerialName("docs")
+    val docs: List<RocketLaunch>
+)
+
 @Entity
 @Serializable
 data class RocketLaunch(
+    @SerialName("id")
+    val id: String,
     @SerialName("flight_number")
     val flightNumber: Int,
     @SerialName("name")
