@@ -8,5 +8,5 @@ import org.koin.dsl.module
 
 val testPlatformModule: Module = module {
     single<MockClient> { MockClient() }
-    single<HttpClient> { testKtorClient(get()) }
+    single<HttpClient> { testKtorClient(get<MockClient>()) }
 }
