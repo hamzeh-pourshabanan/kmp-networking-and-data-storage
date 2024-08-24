@@ -5,6 +5,7 @@ import com.hamzeh.kmp_networking_and_data_storage.data.dto.RocketLaunch
 import com.hamzeh.kmp_networking_and_data_storage.domain.model.RocketLaunchDomainModel
 
 fun RocketLaunch.toEntity(): RocketLaunchEntity = RocketLaunchEntity(
+    id = id,
     flightNumber = flightNumber,
     missionName = missionName,
     launchDate = launchDate,
