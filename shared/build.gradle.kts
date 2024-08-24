@@ -46,6 +46,7 @@ kotlin {
             implementation(libs.resource.test)
             implementation(libs.kotlinx.coroutines.test)
             implementation(libs.turbin)
+            implementation(libs.ktor.client.mock)
 
         }
     }
