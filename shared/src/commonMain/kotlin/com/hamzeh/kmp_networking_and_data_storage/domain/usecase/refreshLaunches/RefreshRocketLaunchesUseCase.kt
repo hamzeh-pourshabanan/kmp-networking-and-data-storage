@@ -6,7 +6,7 @@ interface RefreshRocketLaunchesUseCase {
     suspend operator fun invoke(): Result<Unit>
 
 }
-class RefreshRocketLaunches(
+class DefaultRefreshRocketLaunchesUseCase(
     private val repository: RocketLaunchRepository
 ): RefreshRocketLaunchesUseCase {
     override suspend fun invoke(): Result<Unit> {

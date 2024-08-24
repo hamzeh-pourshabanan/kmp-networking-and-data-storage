@@ -39,7 +39,14 @@ kotlin {
             implementation(libs.koin.core)
             implementation(libs.ktor.serialization.kotlinx.json)
             implementation(libs.ktor.client.logging)
+            implementation(libs.ktor.client.cio)
             implementation(libs.kotlinx.datetime)
+            implementation(libs.androidx.lifecycle.viewmodel)
+
+        }
+        androidMain.dependencies {
+            implementation(libs.koin.android)
+            api(libs.kotlinx.coroutines.android)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
@@ -48,6 +55,7 @@ kotlin {
             implementation(libs.turbin)
             implementation(libs.ktor.client.mock)
             implementation(libs.koin.test)
+
 
         }
     }

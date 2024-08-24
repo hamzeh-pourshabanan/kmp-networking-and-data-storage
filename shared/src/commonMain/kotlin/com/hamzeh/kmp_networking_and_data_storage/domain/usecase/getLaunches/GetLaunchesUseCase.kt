@@ -14,6 +14,9 @@ class DefaultGetLaunchesUseCase(
     private val repository: RocketLaunchRepository
 ): GetLaunchesUseCase {
     override fun invoke(): Flow<List<RocketLaunchDomainModel>> {
-        return repository.getAllLaunches().map { it.toDomainModel() }
+        val allRockets =  repository.getAllLaunches()
+        return allRockets.map { it.filter { rocket ->
+            rocket.patchSmall != null
+        }.toDomainModel() }
     }
 }
