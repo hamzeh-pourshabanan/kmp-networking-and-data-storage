@@ -1,5 +1,5 @@
 # Kotlin Multiplatform SpaceX Rocket Launches App
-
+<img align="right" src="img.png" alt="A demo illustraating the UI of the app" width="288" height="512" style="display: inline; float: right"/>
 This project is a Kotlin Multiplatform application that targets both Android and iOS platforms. It fetches SpaceX rocket launch data using the SpaceX API and demonstrates how to use Room for local storage and ViewModel in the shared module. The UI for the Android version is implemented using Jetpack Compose.
 
 
