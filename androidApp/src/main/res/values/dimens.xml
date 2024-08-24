@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_min_width">180dp</dimen>
+    <dimen name="x_small">8dp</dimen>
+    <dimen name="font_size">12dp</dimen>
+    <dimen name="small">16dp</dimen>
+    <dimen name="item_height">23dp</dimen>
+    <dimen name="item_size">40dp</dimen>
+</resources>
