@@ -11,7 +11,7 @@ actual fun providePlatformInitializer(): PlatformInitializer {
         override fun init(config: PlatformConfig) {
             startKoinApplication(
                 module {
-                    single<Context> { config.context }
+                    single<PlatformConfig> { config }
                 }
             )
         }
