@@ -42,6 +42,8 @@ kotlin {
             implementation(libs.ktor.client.cio)
             implementation(libs.kotlinx.datetime)
             implementation(libs.androidx.lifecycle.viewmodel)
+            api(libs.androidx.datastore.preferences.core)
+            api(libs.androidx.datastore.core.okio)
 
         }
         androidMain.dependencies {
